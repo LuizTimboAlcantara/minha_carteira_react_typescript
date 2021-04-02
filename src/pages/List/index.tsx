@@ -20,19 +20,19 @@ const List: React.FC = () => {
       </ContentHeader>
 
       <Content>
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
-        <HistoryFinanceCard cardColor="#313862" tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
+        <HistoryFinanceCard tagColor="#E44C4E" title="Conta de Luz" subtitle="27/07/2020" amount="R$ 130" />
       </Content>
     </Container>
   );
