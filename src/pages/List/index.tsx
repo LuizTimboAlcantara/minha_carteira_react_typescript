@@ -30,6 +30,8 @@ interface IData {
 
 const List: React.FC<IRouteParams> = ({ match }) => {
   const [data, setData] = useState<IData[]>([]);
+  const [monthSelected, setMonthSelected] = useState<string>(String(new Date().getMonth() + 1));
+  const [yearSelected, setYearSelected] = useState<string>(String(new Date().getFullYear()));
 
   const { type } = match.params;
 
@@ -48,31 +50,39 @@ const List: React.FC<IRouteParams> = ({ match }) => {
   ];
 
   const years = [
+    { value: 2021, label: 2021 },
     { value: 2020, label: 2020 },
     { value: 2019, label: 2019 },
-    { value: 2018, label: 2018 },
   ];
 
   useEffect(() => {
-    const response = listData.map((item) => {
+    const filteredDate = listData.filter((item) => {
+      const date = new Date(item.date);
+      const month = String(date.getMonth() + 1);
+      const year = String(date.getFullYear());
+
+      return month === monthSelected && year === yearSelected;
+    });
+
+    const formattedDate = filteredDate.map((item) => {
       return {
-        id: String(Math.random() * data.length),
+        id: String(new Date().getTime()) + item.amount,
         description: item.description,
         amountFormatted: formatCurrency(Number(item.amount)),
         frequency: item.frequency,
         dataFormatted: formatDate(item.date),
-        tagColor: item.frequency === "recorrente" ? " #4E41F0" : "#E44C4E",
+        tagColor: item.frequency === "recorrente" ? "#4E41F0" : "#E44C4E",
       };
     });
 
-    setData(response);
-  }, []);
+    setData(formattedDate);
+  }, [listData, monthSelected, yearSelected]);
 
   return (
     <Container>
       <ContentHeader title={title.title} lineColor={title.lineColor}>
-        <SelectInput options={months} />
-        <SelectInput options={years} />
+        <SelectInput options={months} onChange={(e) => setMonthSelected(e.target.value)} defaultValue={monthSelected} />
+        <SelectInput options={years} onChange={(e) => setYearSelected(e.target.value)} defaultValue={yearSelected} />
       </ContentHeader>
 
       <Filters>
