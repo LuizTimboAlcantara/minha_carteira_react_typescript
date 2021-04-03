@@ -4,6 +4,7 @@ import ContentHeader from "../../components/ContentHeader";
 import SelectInput from "../../components/SelectInput";
 import WalletBox from "../../components/WalletBox";
 import MessageBox from "../../components/MessageBox";
+import PieChart from "../../components/PieChart";
 
 import expenses from "../../repositories/expenses";
 import gains from "../../repositories/gains";
@@ -100,7 +101,7 @@ const Dashboard: React.FC = () => {
         footerText: "Verifique seus gastos e tente cortar algumas coisas desnecessárias.",
         icon: sadImg,
       };
-    } else if (totalBalance == 0) {
+    } else if (totalBalance === 0) {
       return {
         title: "Ufaaa!",
         description: "Neste mês, você gsatou exatamente o que ganhou.",
@@ -146,7 +147,10 @@ const Dashboard: React.FC = () => {
         <WalletBox title="Saldo" amount={totalBalance} footerlabel="Atualizado com base nas entradas e saídas" icon="dolar" color="#4E41F0" />
         <WalletBox title="Entradas" amount={totalGains} footerlabel="Atualizado com base nas entradas e saídas" icon="arrowUp" color="#F7931B" />
         <WalletBox title="Saídas" amount={totalExpenses} footerlabel="Atualizado com base nas entradas e saídas" icon="arrowDown" color="#E44C4E" />
+
         <MessageBox title={message.title} description={message.description} footerText={message.footerText} icon={message.icon} />
+
+        <PieChart />
       </Content>
     </Container>
   );
